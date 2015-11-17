@@ -15,9 +15,13 @@ router.post('/register', function(req, res) {
 
 router.post('/login', function(req, res){
   User.authenticate(req.body, function(err, user){
+  if (user && user.username && user._id.toString()) {
     res.cookie('username', user.username);
     res.cookie('userId', user._id.toString());
     res.status(err ? 400 : 200).send(err || user);
+  } else {
+    res.status(err ? 400 : 200).send(err || user);
+  }
   });
 });
 

@@ -17,6 +17,6 @@ function login(e) {
   .fail(function(err){
     $('#username').val("");
     $('#pw').val("");
-    swal('Error:', "Unknown Login. (Please restart server!)", 'error');
+    swal('Error:', "Unknown Login.", 'error');
   });
 }
