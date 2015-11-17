@@ -15,13 +15,11 @@ function init(){
 
   $.get('/profile/profileInfo')
   .done(function(data){
-    console.log('profile', data);
     $("#username").text(data.username);
     $("#name").text(data.name);
     $("#email").text(data.email);
     $("#picture").attr('src', data.picture);
   })
   .fail(function(error){
-    console.log(error);
   })
 }

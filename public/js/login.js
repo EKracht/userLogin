@@ -6,20 +6,17 @@ $(function(){
 
 function login(e) {
   e.preventDefault();
-  console.log('login');
 
   var username = $('#username').val();
   var pw = $('#pw').val();
 
   $.post('/users/login', {username: username, password: pw})
   .done(function(data){
-    console.log(data);
     window.location.replace('/profile');
   })
   .fail(function(err){
     $('#username').val("");
     $('#pw').val("");
-    swal('Error:', err, 'error');
+    swal('Error:', "Unknown Login. (Please restart server!)", 'error');
   });
-
 }

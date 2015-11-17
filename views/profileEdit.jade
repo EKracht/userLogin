@@ -1,19 +1,18 @@
 extends ./layout
 
 block css
-    link(href='../vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-    link(href='../vendor/sweetalert/dist/sweetalert.css', rel='stylesheet')
+    link(href='../css/style.css', rel='stylesheet')
 
 block content
-    .container
+    .container#profileEditBG
       h1 Edit Profile
       hr
       .row
         // left column
         .col-md-3
           .text-center
-            img.avatar.img-circle(src='//placehold.it/100', alt='avatar')
-            h6 Link a photo url...
+            img.avatar.img-circle(src='//placehold.it/120', alt='avatar')
+            h6 Link a photo url!
             input.form-control#urlInput(type='text')
         // edit form column
         .col-md-9.personal-info
@@ -36,9 +35,6 @@ block content
     hr
 
 block js
-    script(src='../vendor/jquery/dist/jquery.min.js')
-    script(src='../vendor/bootstrap/dist/js/bootstrap.min.js')
-    script(src='../vendor/sweetalert/dist/sweetalert.min.js')
     script(src='../js/main.js')
     script(src='../js/login.js')
     script(src='../js/profileEdit.js')

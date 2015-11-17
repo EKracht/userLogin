@@ -16,8 +16,6 @@ router.get('/profileEdit', function(req, res) {
 
 router.put('/', function(req, res){
   User.findByIdAndUpdate(req.body._id, req.body, function(err, user){
-    console.log('bod:', req.body);
-    console.log(user);
     res.status(err ? 400 : 200).send(err ? 'profile update failed' : user);
   });
 });
