@@ -1,12 +1,12 @@
 {
-  "name": "expresstest",
+  "name": "userprofile",
   "description": "",
   "main": "app.js",
   "authors": [
-    "Cade Nichols <cade@cadenichols.com>"
+    "Ethan Kracht <ethan1kracht@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/cadenichols/express-sample",
+  "homepage": "https://github.com/EKracht/userLogin", 
   "moduleType": [],
   "ignore": [
     "**/.*",
